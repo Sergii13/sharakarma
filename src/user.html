@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Пользователям"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+         <section class="top top_partner">
+            <div class="top__container">
+               <div class="breadcrumbs top__breadcrumbs">
+                  <ul class="breadcrumbs__list">
+                     <li class="breadcrumbs__item">
+                        <a href="">
+                           Главная
+                        </a>
+                     </li>
+                     <li class="breadcrumbs__item">
+                        <a href="">
+                           Партнерам
+                        </a>
+                     </li>
+                     <li class="breadcrumbs__item">
+                        <span>Пользователям</span>
+                     </li>
+                  </ul>
+               </div>
+               <div class="top__content">
+                  <div class="top__image">
+                     <img src="@img/top/03.svg" alt="">
+                  </div>
+                  <div class="top__inner">
+                     <h1 class="title top__title">
+                        Пользователям
+                     </h1>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="user">
+            <div class="user__container">
+               <h2 class="user__title">
+                  Что нужно сделать, для участия в программе?
+               </h2>
+               <p>Всё просто. Для этого, Вы должны зарегистрироваться на сайте. Логин и пароль приходит на указанную
+                  Вами почту. Ваша реферальная ссылка будет находиться, в Вашем личном кабинете. Главное условие.
+                  Программа начисления вознаграждения, работает, только при переходе Вашего реферала по Вашей
+                  реферальной ссылке.</p>
+               <div class="user__wrap">
+                  <h4>Ваши проценты вознаграждения зависят от приведённых рефералов:</h4>
+                  <ul>
+                     <li>
+                        0.5% — с 1-го до 20-го реферала
+                     </li>
+                     <li>0.7% — с 21-го до 70-го реферала</li>
+                     <li>0.9% — с 71-го реферала</li>
+                  </ul>
+                  <p>Вознаграждение рассчитывается от суммы обмена, Вашего реферала. В случае если сервис не имеет
+                     заработка
+                     с проведённого обмена, партнёрское вознаграждение не начисляется. Для вывода партнёрского
+                     вознаграждения количество уникальных привлечённых вами клиентов должно быть не менее 3. Партнёрские
+                     выплаты производятся на любые, из предложенных сервисом, направления. Минимальная сумма вывода
+                     партнёрского вознаграждения 3 доллара США, 150 рублей.</p>
+               </div>
+               <div class="user__bottom-text">
+                  <p>Для уточнения информации, Вы можете написать нам на почту <a
+                        href="mailto:info.ferma.cc@gmail.com">info.ferma.cc@gmail.com</a>, либо в чат.</p>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_popup.htm',{})
+   @@include('html/_js.htm',{})
+</body>
+
+</html>

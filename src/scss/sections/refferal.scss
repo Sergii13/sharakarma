@@ -1,0 +1,391 @@
+.personal-tabs {
+  // .personal-tabs__refferal
+  &__refferal {
+  }
+}
+.refferal {
+  // .refferal__info
+  &__info {
+    &:not(:last-child) {
+      margin-bottom: rem(80);
+      @media (max-width: $tablet) {
+        margin-bottom: rem(50);
+      }
+    }
+  }
+  // .refferal__history
+  &__history {
+    &:not(:last-child) {
+      margin-bottom: rem(80);
+      @media (max-width: $tablet) {
+        margin-bottom: rem(50);
+      }
+    }
+  }
+  &__history-head {
+    font-weight: 600;
+    font-size: rem(22);
+    line-height: math.div(27, 22);
+    text-align: center;
+    letter-spacing: -0.02em;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: rem(15);
+    @media (max-width: $tablet) {
+      font-size: rem(18);
+      padding: rem(14);
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+      @media (max-width: $tablet) {
+        margin-bottom: rem(5);
+      }
+    }
+  }
+  // .refferal__empty
+}
+.info-refferal {
+  background: rgba(149, 149, 149, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(25px);
+  border-radius: 35px;
+  padding: rem(35) rem(50);
+  @media (max-width: $tablet) {
+    padding: rem(30);
+  }
+  @media (max-width: $mobile) {
+    padding: rem(25) rem(20) rem(30);
+  }
+  p {
+    font-size: rem(18);
+    line-height: math.div(22, 18);
+    letter-spacing: -0.02em;
+    @media (max-width: $tablet) {
+      font-size: rem(15);
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(13);
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+      @media (max-width: $tablet) {
+        margin-bottom: rem(25);
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: rem(15);
+      }
+    }
+  }
+  // .info-refferal__title
+  &__title {
+    font-weight: 600;
+    font-size: rem(28);
+    color: $greenColor;
+    line-height: math.div(34, 28);
+    letter-spacing: -0.02em;
+    @media (max-width: $tablet) {
+      font-size: rem(20);
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(18);
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+      @media (max-width: $tablet) {
+        margin-bottom: rem(15);
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: rem(6);
+      }
+    }
+  } // .infp-refferal__top
+  &__top {
+    padding-bottom: rem(50);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    @media (max-width: $tablet) {
+      padding-bottom: rem(33);
+    }
+  }
+  // .info-refferal__link
+  &__link {
+    padding: rem(4) rem(40);
+    @media (max-width: $tablet) {
+      height: rem(38);
+      font-size: rem(15);
+    }
+    @media (max-width: $mobile) {
+      width: 100%;
+      height: rem(36);
+      font-size: rem(13);
+    }
+  }
+  // .info-refferal__bottom
+  &__bottom {
+    padding-top: rem(28);
+    @media (max-width: $mobile) {
+      padding-top: rem(20);
+    }
+    p {
+      font-weight: 600;
+      font-size: rem(22);
+      line-height: math.div(27, 22);
+      letter-spacing: -0.02em;
+      &:not(:last-child) {
+        margin-bottom: rem(20);
+        @media (max-width: $tablet) {
+          margin-bottom: rem(10);
+        }
+        @media (max-width: $mobile) {
+          margin-bottom: rem(5);
+        }
+      }
+      @media (max-width: $tablet) {
+        font-size: rem(18);
+      }
+      @media (max-width: $mobile) {
+        font-size: rem(15);
+      }
+    }
+  }
+  // .info-refferal__copy
+  &__copy {
+    max-width: rem(846);
+    width: 100%;
+  }
+}
+
+.output-refferal {
+  background: rgba(149, 149, 149, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(25px);
+  border-radius: 35px;
+  padding: rem(40) rem(45);
+  min-height: rem(534);
+  @media (max-width: $tablet) {
+    min-height: rem(384);
+  }
+  @media (max-width: $mobile) {
+    padding: rem(25) rem(20) rem(30);
+  }
+  // .output-refferal__form
+  &__form {
+  }
+  &__title {
+    font-weight: 600;
+    font-size: rem(30);
+    line-height: math.div(37, 30);
+    color: $greenColor;
+    letter-spacing: -0.02em;
+    text-align: center;
+    @media (max-width: $tablet) {
+      font-size: rem(24);
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(18);
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(27);
+      @media (max-width: $mobile) {
+        margin-bottom: rem(22);
+      }
+    }
+  }
+  // .ouput-refferal__row
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(21);
+    @media (max-width: em(600)) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &__select {
+    display: flex;
+    justify-content: center;
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+  // .output-refferal__items
+  &__items {
+    & > * {
+      &:not(:last-child) {
+        margin-bottom: rem(15);
+        @media (max-width: $tablet) {
+          margin-bottom: rem(10);
+        }
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(21);
+      @media (max-width: $tablet) {
+        margin-bottom: rem(10);
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: rem(6);
+      }
+    }
+  }
+  // .output-refferal__info
+  &__info {
+    font-size: rem(18);
+    line-height: math.div(22, 18);
+    letter-spacing: -0.02em;
+    @media (max-width: $tablet) {
+      font-size: rem(15);
+    }
+  }
+  // .output-refferal__button
+  &__button {
+    padding: rem(5) rem(50);
+    @media (max-width: em(600)) {
+      width: 100%;
+    }
+  }
+}
+.refferal {
+  // .refferal__table
+  &__table {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 37px 65px 20px;
+    border-radius: 30px;
+    @media (max-width: $tablet) {
+      padding: 37px 25px 20px;
+    }
+    @media (max-width: $mobile) {
+      padding: rem(50) rem(20) rem(27);
+    }
+  }
+}
+.table {
+  table {
+    width: 100%;
+    table-layout: auto;
+    border-collapse: separate;
+    border-spacing: 0 18px;
+    @media (max-width: $tablet) {
+      border-spacing: 0 10px;
+    }
+    @media (max-width: $mobile) {
+      border-spacing: 0 0px;
+    }
+  }
+  thead {
+    padding-bottom: 20px;
+  }
+  th {
+    padding-bottom: 8px;
+    @media (max-width: $tablet) {
+      padding-bottom: 20px;
+    }
+  }
+  th,
+  td {
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: math.div(22, 18);
+    letter-spacing: -0.02em;
+    @media (max-width: $tablet) {
+      font-size: 16px;
+    }
+    @media (max-width: $mobile) {
+      text-align: left;
+    }
+  }
+  td {
+    padding: 10px;
+    @media (min-width: $mobile) {
+      word-break: break-word;
+    }
+  }
+  td {
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    &:first-child {
+      border-radius: 20px 0 0 20px;
+      border-left: 2px solid rgba(255, 255, 255, 0.5);
+    }
+    &:last-child {
+      border-radius: 0 20px 20px 0;
+      border-right: 2px solid rgba(255, 255, 255, 0.5);
+    }
+  }
+  tbody tr {
+  }
+  // .table__value
+  &__value {
+  }
+  // .table__summa
+  &__summa {
+    background: #4d9c28;
+    font-size: 16px;
+    padding: 6px 13px;
+    border-radius: 20px;
+    display: inline-block;
+    @media (max-width: $mobile) {
+      padding: 5px 9px;
+    }
+  }
+  &__hash {
+    @media (min-width: $mobile) {
+      display: none;
+    }
+  }
+  &__mob-date {
+    color: #a2a2a2;
+    margin-left: 3px;
+    @media (min-width: $mobile) {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    table {
+      border: 0;
+    }
+
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    table tr {
+      display: block;
+      margin-bottom: rem(30);
+    }
+
+    table td {
+      display: flex;
+      align-items: center;
+      border: none !important;
+      padding: 0;
+      gap: rem(12);
+      &:not(:last-child) {
+        margin-bottom: rem(14);
+      }
+    }
+
+    table td::before {
+      /*
+     * aria-label has no advantage, it won't be read inside a table
+     content: attr(aria-label);
+     */
+      content: attr(data-label);
+      float: left;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+}

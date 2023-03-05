@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Мониторингам"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+         <section class="top top_faq">
+            <div class="top__container">
+               <div class="breadcrumbs top__breadcrumbs">
+                  <ul class="breadcrumbs__list">
+                     <li class="breadcrumbs__item">
+                        <a href="">
+                           Главная
+                        </a>
+                     </li>
+                     <li class="breadcrumbs__item">
+                        <a href="">
+                           Партнерам
+                        </a>
+                     </li>
+                     <li class="breadcrumbs__item">
+                        <span>Мониторингам</span>
+                     </li>
+                  </ul>
+               </div>
+               <div class="top__content">
+                  <div class="top__image">
+                     <img src="@img/top/04.svg" alt="">
+                  </div>
+                  <div class="top__inner">
+                     <h1 class="title top__title">
+                        Мониторингам
+                     </h1>
+                     <div class="top__text">
+                        <p>Уважаемые мониторинги обмена электронных валют, мы стремимся развивать взаимовыгодные и
+                           перспективные отношения, которые позволят Вам и нам увеличить доход.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <div class="monitor">
+            <div class="monitor__container">
+               <div class="monitor__row">
+                  <div class="monitor__content">
+                     <p>Для участия в партнёрской программе, зарегистрируйтесь как мониторинг на нашем сайте, и
+                        получите реферальную ссылку. Для мониторингов действует единая реферальная программа 0,5% от
+                        суммы обмена Вашего реферала.</p>
+                     <div class="monitor__items">
+                        <div class="monitor__item item-monitor">
+                           <p class="item-monitor__label"> Адрес файла экспорта курсов XML</p>
+                           <div class="item-monitor__input-wrap">
+                              <input autocomplete="off" readonly type="text" value="ferma.cc/valuta.xml" name="form[]"
+                                 data-error="Ошибка" placeholder="" class="input">
+                              <a href="" class="button item-monitor__button">
+                                 Скачать
+                              </a>
+                           </div>
+                        </div>
+                        <div class="monitor__item item-monitor">
+                           <p class="item-monitor__label">Адрес файла экспорта курсов JSON</p>
+                           <div class="item-monitor__input-wrap">
+                              <input autocomplete="off" readonly type="text" value="ferma.cc/valuta.json" name="form[]"
+                                 data-error="Ошибка" placeholder="" class="input">
+                              <a href="" class="button item-monitor__button">
+                                 Скачать
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="monitor__politic">
+                        <p>Для уточнения информации, Вы можете написать нам на почту <a
+                              href="mailto:info.ferma.cc@gmail.com">info.ferma.cc@gmail.com</a>, либо в
+                           online чат.</p>
+                     </div>
+                  </div>
+
+                  <form action="#" class="monitor__form form">
+                     <h4 class="form__title">
+                        Регистрация мониторинга
+                     </h4>
+                     <div class="form__items">
+                        <div class="form__item">
+                           <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Email"
+                              class="input form__input">
+                        </div>
+                        <div class="form__item">
+                           <input autocomplete="off" type="password" name="form[]" data-error="Ошибка"
+                              placeholder="Пароль" class="input form__input input_password">
+                           <button class="form__viewpass" type="button"></button>
+                        </div>
+                        <div class="form__item">
+                           <input autocomplete="off" type="password" name="form[]" data-error="Ошибка"
+                              placeholder="Повторний пароль" class="input form__input input_password">
+                           <button class="form__viewpass" type="button"></button>
+                        </div>
+                     </div>
+                     <div class="form__politic">
+                        <p>Нажимая кнопку “Зарегистрироваться”, я соглашаюсь с <a href="">правилами и условиями
+                              сервиса</a></p>
+                     </div>
+                     <button class="button form__button">
+                        Зарегистрироваться
+                     </button>
+                  </form>
+
+               </div>
+            </div>
+         </div>
+      </main>
+      @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_popup.htm',{})
+   @@include('html/_js.htm',{})
+</body>
+
+</html>

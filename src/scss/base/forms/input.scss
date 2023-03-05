@@ -1,0 +1,79 @@
+//<INPUT>
+// Снипет (HTML): inp
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+.input {
+   width: 100%;
+   display: block;
+   border: 2px solid rgba(255, 255, 255, 0.5);
+   border-radius: 40px;
+   background-color: transparent;
+   padding: rem(5) rem(28);
+   height: rem(55);
+   font-weight: 600;
+   font-size: rem(18);
+   line-height: math.div(22, 18);
+   color: #fff;
+   letter-spacing: -0.02em;
+   @media (max-width: $tablet) {
+      height: rem(40);
+      padding: rem(3) rem(20);
+      font-size: rem(15);
+   }
+   &:focus {
+      outline: none;
+      border: 2px solid rgba(255, 255, 255, 1);
+   }
+   &::placeholder {
+      color: #fff;
+   }
+   &._form-focus {
+   }
+   &._form-error {
+   }
+   &_password {
+      padding-right: rem(50);
+      @media (max-width: $tablet) {
+         padding-right: rem(40);
+      }
+   }
+   &.input-validation-error {
+      color: #ee5555;
+      border: 2px solid rgba(238, 85, 85, 0.5);
+      &::placeholder {
+         color: #ee5555;
+      }
+   }
+}
+textarea.input {
+   resize: none;
+   padding: rem(27);
+   height: rem(251);
+   font-size: rem(18);
+   @media (max-width: $tablet) {
+      border-radius: 20px;
+      height: rem(158);
+      font-size: rem(15);
+      padding: rem(15) rem(20);
+   }
+}
+.field-validation-error {
+   color: #ee5555;
+   line-height: math.div(20, 16);
+   letter-spacing: -0.02em;
+   padding-left: rem(20);
+   margin-top: rem(2);
+   @media (max-width: $tablet) {
+      font-size: rem(14);
+   }
+   @media (max-width: $mobile) {
+      font-size: rem(11);
+      padding-left: rem(10);
+   }
+}

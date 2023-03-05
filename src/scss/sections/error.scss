@@ -1,0 +1,21 @@
+.error {
+   padding-top: rem(50);
+   padding-bottom: rem(100);
+   @media (max-width: $tablet) {
+      padding-top: rem(35);
+   }
+   // .error__container
+   &__container {
+   }
+   // .error__image
+   &__image {
+      max-width: rem(823);
+      margin: 0 auto;
+      @media (max-width: $tablet) {
+         max-width: rem(600);
+      }
+      @media (max-width: $mobile) {
+         max-width: rem(344);
+      }
+   }
+}

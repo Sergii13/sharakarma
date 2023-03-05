@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"403"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+         <section class="top top_404">
+            <div class="top__container">
+               <div class="top__content">
+                  <div class="top__inner">
+                     <h1 class="title top__title">
+                        403
+                     </h1>
+                     <h2 class="top__title2">
+                        В доступе отказано
+                     </h2>
+                     <div class="top__text-info">
+                        <p>Обратитесь в поддержку или напишите нам на почту <a
+                              href="mailto:sharakarma@gmail.com">sharakarma@gmail.com</a></p>
+                     </div>
+                     <a href="" class="button top__to-main">
+                        Перейти на главную
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <div class="error">
+            <div class="error__container">
+               <div class="error__image">
+                  <img src="@img/about/403.svg" alt="">
+               </div>
+            </div>
+         </div>
+      </main>
+      @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_popup.htm',{})
+   @@include('html/_js.htm',{})
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<div id="popup" aria-hidden="true" class="popup">
+   <div class="popup__wrapper">
+      <div class="popup__content">
+         <button data-close type="button" class="popup__close"><img src="@img/svg/X.svg" alt=""></button>
+         <div class="popup__inner">
+            <h2 class="popup__title">
+               Войти в личный кабинет
+            </h2>
+            <form action="#" class="popup-form popup__form">
+               <div class="popup-form__items">
+                  <div class="popup-form__item">
+                     <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Email"
+                        class="input">
+                  </div>
+                  <div class="popup-form__item">
+                     <input autocomplete="off" type="password" name="form[]" data-error="Ошибка"
+                        placeholder="Введите пароль" class="input">
+                     <button class="form__viewpass" type="button"></button>
+                  </div>
+               </div>
+               <div class="popup-form__row">
+                  <div class="popup-form__reset-password">
+                     <a href="">Забули пароль?</a>
+                  </div>
+                  <div class="checkbox popup-form__checkbox">
+                     <input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                        name="form[]">
+                     <label for="c_1" class="checkbox__label"><span class="checkbox__text">Запомнить меня</span></label>
+                  </div>
+               </div>
+
+               <button class="popup-form__button button">
+                  Войти
+               </button>
+            </form>
+         </div>
+
+      </div>
+   </div>
+</div>
+<div id="popup2" aria-hidden="true" class="popup popup_ok">
+   <div class="popup__wrapper">
+      <div class="popup__content">
+         <button data-close type="button" class="popup__close"><img src="@img/svg/X.svg" alt=""></button>
+         <div class="popup__inner">
+            <div class="popup__image">
+               <img src="@img/svg/check_circle.svg" alt="">
+            </div>
+            <div class="popup__descr">
+               <p>Заявка успешно принята. Вам выслана ссылка на ваш e-mail, перейдя по которой вы сможете восстановить
+                  свой пароль к аккаунту</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div hidden class="copied">
+   <p>Copied successfully!</p>
+</div>

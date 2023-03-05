@@ -1,0 +1,298 @@
+//====================================================================================================
+.header {
+   padding: rem(20) 0;
+   @media (max-width: $mobile) {
+      padding: rem(16) 0;
+   }
+   // .header__container
+   &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: rem(30);
+      @media (max-width: $tablet) {
+         gap: rem(20);
+      }
+   }
+   &__login-icon {
+      width: rem(24);
+      stroke: #fff;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      height: rem(24);
+      margin-right: rem(5);
+   }
+   // .header__logo
+   &__logo {
+      margin-right: rem(30);
+   }
+   // .header__menu
+   &__menu {
+   }
+   // .header__actions
+   &__actions {
+      display: flex;
+      align-items: center;
+      gap: rem(10);
+   }
+   &__register-icon {
+      width: rem(24);
+      height: rem(24);
+      margin-right: rem(5);
+   }
+   &__select {
+      @media (max-width: em(650)) {
+         width: rem(75);
+         margin-left: auto;
+      }
+   }
+   // .header__login
+   &__login {
+      @media (any-hover: hover) {
+         &:hover {
+            .header__login-icon {
+               stroke: $greenColor;
+            }
+         }
+      }
+      @media (max-width: em(650)) {
+         width: 100%;
+      }
+      @media (max-width: $mobile) {
+         width: 100%;
+      }
+      &_lk {
+         padding: rem(3) rem(15);
+      }
+   }
+   // .header__register
+   &__register {
+      &_lk {
+         padding: rem(3) rem(20);
+      }
+   }
+}
+.menu {
+   @media (max-width: $tablet) {
+      position: fixed;
+      width: rem(300);
+      z-index: 7;
+      background: linear-gradient(158.86deg, #0b443f 0.66%, #480b3d 33.9%, #3d1150 61.52%, #093935 98.85%);
+      will-change: right;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      top: 0;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      flex-direction: column;
+      right: 0;
+      overflow-y: auto;
+      transform: translateX(100%);
+      max-height: 100vh;
+      height: 100%;
+      padding: rem(61) rem(14) rem(33);
+   }
+   &__mob {
+      display: grid;
+      gap: rem(20);
+      @media (min-width: $mobile) {
+         display: none;
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(20);
+      }
+   }
+
+   // .menu__icon
+   &__icon {
+   }
+   // .menu__body
+   &__body {
+      @media (max-width: $tablet) {
+         padding-bottom: rem(33);
+         position: relative;
+         z-index: 7;
+         display: flex;
+         flex-direction: column;
+         min-height: 100%;
+      }
+   }
+
+   // .menu__list
+   &__list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-left: rem(25);
+      gap: rem(10) rem(30);
+
+      @media (max-width: em(1100)) {
+         gap: rem(10) rem(20);
+         padding-left: 0;
+      }
+      @media (max-width: $tablet) {
+         flex-direction: column;
+         gap: 0;
+         text-align: right;
+         align-items: flex-end;
+         &:not(:last-child) {
+            margin-bottom: rem(20);
+         }
+      }
+   }
+   // .menu__item
+   &__item {
+      @media (max-width: $tablet) {
+         width: 100%;
+         text-align: center;
+         &:not(:last-child) {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+         }
+      }
+   }
+   // .menu__link
+   &__link {
+      letter-spacing: -0.02em;
+      position: relative;
+      @media (max-width: em(1150)) {
+         font-size: rem(13);
+      }
+      @media (max-width: $tablet) {
+         padding: rem(15);
+         display: inline-flex;
+         line-height: math.div(24, 20);
+         letter-spacing: -0.02em;
+         font-size: rem(20);
+         text-shadow: none;
+      }
+      &.active {
+         text-shadow: 0 0 0.85px #fff, 0 0 0.85px #fff;
+         &::after {
+            width: calc(100% + 18px);
+         }
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            color: $greenColor;
+         }
+      }
+      &::after {
+         content: "";
+         position: absolute;
+         width: 0;
+         left: -9px;
+
+         bottom: -10px;
+         height: 1px;
+         background-color: #fff;
+         transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+         @media (max-width: $tablet) {
+            display: none;
+         }
+      }
+   }
+   &__copy {
+      @media (min-width: $tablet) {
+         display: none;
+      }
+      text-align: center;
+      font-weight: 500;
+      font-size: rem(20);
+      line-height: math.div(24, 20);
+      letter-spacing: -0.02em;
+      margin-top: auto;
+   }
+   &__big-logo {
+      @media (min-width: $tablet) {
+         display: none;
+      }
+      text-align: center;
+      @media (max-width: $mobileSmall) {
+         max-width: rem(140);
+         margin: 0 auto;
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(88);
+         @media (max-width: $mobileSmall) {
+            margin-bottom: rem(20);
+         }
+      }
+   }
+   &__close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      @media (min-width: $tablet) {
+         display: none;
+      }
+   }
+}
+.menu-open {
+   .menu::after {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+   }
+   .menu {
+      transform: translateX(0);
+   }
+   .wrapper {
+      &::after {
+         content: "";
+         background: rgba(0, 0, 0, 0.6);
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: 4;
+      }
+   }
+}
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+   display: none;
+   flex-shrink: 0;
+   @media (max-width: $tablet) {
+      display: block;
+      position: relative;
+      width: rem(42);
+      height: rem(42);
+      border-radius: 50%;
+      margin-right: rem(10);
+      padding: rem(14) rem(10);
+      background-color: $greenColor;
+      z-index: 4;
+      @media (any-hover: none) {
+         cursor: default;
+      }
+      span,
+      &::before,
+      &::after {
+         content: "";
+         transition: all 0.3s ease 0s;
+         right: 10px;
+         position: absolute;
+         width: 100%;
+         width: rem(22);
+         border-radius: 2px;
+         height: rem(2);
+         background-color: #fff;
+      }
+      span {
+         width: rem(16);
+
+         margin-left: auto;
+      }
+      &::before {
+         top: 14px;
+      }
+      &::after {
+         bottom: 14px;
+      }
+      span {
+         top: calc(50% - rem(1));
+      }
+   }
+}

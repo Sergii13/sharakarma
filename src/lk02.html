@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Личный кабинет заявки"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/_header2.htm',{})
+      <main class="page">
+         <section class="payment">
+            <div class="payment__container">
+               <div class="payment__top top-payment">
+                  <div class="top-payment__image">
+                     <img src="@img/top/10.svg" alt="">
+                  </div>
+                  <div class="top-payment__content">
+                     <h1 class="top-payment__title">
+                        Заявка № 440535 принята в <br>
+                        обработку.
+                     </h1>
+                     <div class="top-payment__subtitle">
+                        <p>Вы обмениваете</p>
+                     </div>
+                     <div class="top-payment__row">
+                        <div class="top-payment__item">
+                           <div class="top-payment__avatar-ibg">
+                              <img src="@img/personal/monobank.png" alt="">
+                           </div>
+                           <div class="top-payment__price">
+                              500.50 UAN
+                           </div>
+                        </div>
+                        <div class="top-payment__item">
+                           <div class="top-payment__avatar-ibg">
+                              <img src="@img/personal/02.png" alt="">
+                           </div>
+                           <div class="top-payment__price">
+                              8.97678 USDT
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="payment__text">
+                  <p>В течение 5-15 минут. после поступления Ваших денег на наш счёт, она будет обработана и средства
+                     будут перечислены на указанный вами кошелёк или счёт,
+                     Отследить статус заявки можно через Ваш личный кабинет.
+                     Пожалуйста убедитесь, что вы не только нажали на кнопку “Я оплатил", но и действительно перевели к
+                     нам средства.
+                     По всем вопросам или в случае задержки обмена, обращайтесь в техническую поддержку.
+                     С Уважением. администрация сайта,</p>
+               </div>
+               <div class="payment__button-wrap">
+                  <a href="" class="button button_border payment__link">
+                     Перейти к заявкам
+                  </a>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_popup.htm',{})
+   @@include('html/_js.htm',{})
+</body>
+
+</html>

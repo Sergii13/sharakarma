@@ -1,0 +1,99 @@
+.user {
+   padding-top: rem(20);
+   padding-bottom: rem(80);
+   @media (max-width: $tablet) {
+      padding-top: 0;
+   }
+   // .user__container
+   &__container {
+      p {
+         font-size: rem(18);
+         line-height: math.div(22, 18);
+         letter-spacing: -0.02em;
+         @media (max-width: $tablet) {
+            font-size: rem(15);
+         }
+      }
+   }
+   // .user__title
+   &__title {
+      font-weight: 600;
+      @include adaptiveValue("font-size", 30, 16);
+      line-height: math.div(37, 30);
+      letter-spacing: -0.02em;
+      &:not(:last-child) {
+         margin-bottom: rem(20);
+         @media (max-width: $mobile) {
+            margin-bottom: rem(10);
+         }
+      }
+   }
+   // .user__wrap
+   &__wrap {
+      background: rgba(149, 149, 149, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 40px;
+      padding: rem(40) rem(17) rem(48) rem(40);
+      margin: rem(50) 0;
+      @media (max-width: $tablet) {
+         margin: rem(40) 0 rem(10);
+         border-radius: 30px;
+         padding: rem(25) rem(30);
+      }
+      @media (max-width: $mobile) {
+         margin-bottom: rem(5);
+         padding-right: rem(20) rem(20) rem(26) rem(20);
+      }
+      h4 {
+         font-weight: 600;
+         @include adaptiveValue("font-size", 30, 16);
+         line-height: math.div(37, 30);
+         letter-spacing: -0.02em;
+         color: #00dbc3;
+         &:not(:last-child) {
+            margin-bottom: rem(20);
+            @media (max-width: $tablet) {
+               margin-bottom: rem(10);
+            }
+         }
+      }
+      ul {
+         padding-left: rem(24);
+         @media (max-width: $tablet) {
+            padding-left: rem(20);
+         }
+         li {
+            font-weight: 600;
+            list-style: disc;
+            @include adaptiveValue("font-size", 24, 15);
+            line-height: math.div(29, 24);
+            letter-spacing: -0.02em;
+         }
+         &:not(:last-child) {
+            margin-bottom: rem(30);
+            @media (max-width: $tablet) {
+               margin-bottom: rem(15);
+            }
+         }
+      }
+   }
+   // .user__bottom-text
+   &__bottom-text {
+      color: rgba(255, 255, 255, 0.5);
+      @media (max-width: $tablet) {
+         font-size: rem(13);
+      }
+      @media (max-width: $mobile) {
+         font-size: rem(11);
+      }
+      a {
+         font-weight: 700;
+         color: $greenColor;
+         @media (any-hover: hover) {
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+      }
+   }
+}

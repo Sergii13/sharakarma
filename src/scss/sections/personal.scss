@@ -1,0 +1,94 @@
+.personal {
+   padding-bottom: rem(50);
+   // .personal__container
+   &__container {
+   }
+   // .personal__tabs
+   &__tabs {
+   }
+}
+.personal-tabs {
+   // .personal-tabs__navigation
+   &__navigation {
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 20px;
+      height: rem(80);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      white-space: nowrap;
+      overflow-x: auto;
+      gap: rem(15);
+      padding: rem(10) rem(67);
+      @media (max-width: $tablet) {
+         padding: rem(5) rem(41);
+         height: rem(60);
+      }
+      @media (max-width: $mobile) {
+         height: rem(50);
+         padding: rem(3) rem(20);
+         &::-webkit-scrollbar {
+            display: none;
+         }
+
+         /* Hide scrollbar for IE, Edge and Firefox */
+         & {
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+         }
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(10);
+         @media (max-width: $tablet) {
+            margin-bottom: rem(5);
+         }
+      }
+   }
+   // .personal-tabs__title
+   &__title {
+      font-weight: 500;
+      font-size: rem(22);
+      color: rgba(255, 255, 255, 0.5);
+      line-height: math.div(27, 22);
+      letter-spacing: -0.02em;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      position: relative;
+      @media (max-width: em(1100)) {
+         font-size: rem(15);
+      }
+      &::after {
+         content: "";
+         width: 0;
+         height: 1px;
+         left: 0;
+         position: absolute;
+         transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+         bottom: -7px;
+
+         background-color: #ffffff;
+         @media (max-width: $mobile) {
+            display: none;
+         }
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            color: #ffffff;
+         }
+      }
+      &._tab-active {
+         color: #ffffff;
+         &::after {
+            width: 100%;
+         }
+      }
+   }
+   // .personal-tabs__content
+   &__content {
+   }
+   // .personal-tabs__body
+   &__body {
+   }
+   // .personal-tabs__app
+   &__app {
+   }
+}

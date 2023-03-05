@@ -1,0 +1,73 @@
+.reset {
+   @include adaptiveValue("padding-bottom", 100, 80);
+   // .reset__container
+   &__container {
+   }
+   // .reset__form
+   &__form {
+   }
+}
+.form-reset {
+   background: rgba(149, 149, 149, 0.1);
+   backdrop-filter: blur(10px);
+   border-radius: 40px;
+   padding: rem(37) rem(45);
+   @media (max-width: $tablet) {
+      padding: rem(34) rem(30);
+   }
+   @media (max-width: $mobile) {
+      padding: rem(30) rem(20);
+      border-radius: 30px;
+   }
+   // .form-reset__item
+   &__item {
+      position: relative;
+      &:not(:last-child) {
+         margin-bottom: rem(20);
+         @media (max-width: $mobile) {
+            margin-bottom: rem(15);
+         }
+      }
+      .input {
+         @media (max-width: $tablet) {
+            height: rem(45);
+         }
+      }
+   }
+   &__politik {
+      line-height: math.div(20, 16);
+      letter-spacing: -0.02em;
+      color: rgba(255, 255, 255, 0.5);
+      @media (max-width: $tablet) {
+         font-size: rem(13);
+      }
+      @media (max-width: $mobile) {
+         font-size: rem(11);
+      }
+      a {
+         color: $greenColor;
+         font-weight: 600;
+         @media (any-hover: hover) {
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(20);
+         @media (max-width: $mobile) {
+            margin-bottom: rem(14);
+         }
+      }
+   }
+   // .form-reset__button
+   &__button {
+      width: 100%;
+      height: rem(52);
+      font-size: rem(18);
+      @media (max-width: $tablet) {
+         height: rem(48);
+         font-size: rem(15);
+      }
+   }
+}

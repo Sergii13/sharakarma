@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Личный кабинет заявки"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/_header2.htm',{})
+      <main class="page">
+         <section class="payment">
+            <div class="payment__container">
+               <div class="payment__top top-payment">
+                  <div class="top-payment__image">
+                     <img src="@img/top/10.svg" alt="">
+                  </div>
+                  <div class="top-payment__content">
+                     <div class="top-payment__head">
+                        <h1 class="top-payment__title">
+                           Оплата заявки
+                        </h1>
+                        <div class="top-payment__time">
+                           В ТЕЧЕНИИ 18:23 МИН
+                        </div>
+                     </div>
+                     <div class="top-payment__subtitle">
+                        <p>Вы обмениваете</p>
+                     </div>
+                     <div class="top-payment__row">
+                        <div class="top-payment__item">
+                           <div class="top-payment__avatar-ibg">
+                              <img src="@img/personal/monobank.png" alt="">
+                           </div>
+                           <div class="top-payment__price">
+                              500.50 UAN
+                           </div>
+                        </div>
+                        <div class="top-payment__item">
+                           <div class="top-payment__avatar-ibg">
+                              <img src="@img/personal/02.png" alt="">
+                           </div>
+                           <div class="top-payment__price">
+                              8.97678 USDT
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="payment__step step">
+                  <div class="step__item">
+                     <div class="step__head">
+                        <span class="step__count">
+                           1
+                        </span>
+                        Для оплаты Вам нужно совершить перевод суммы на указанные реквизиты:
+                     </div>
+                     <ul class="step__list">
+                        <li>
+                           <p class="step__label">Кошелек:</p>
+                           <div class="step__copy copy">
+                              <span class="copy__value">Tbgv346/34/7kjhgc</span>
+                              <button class="copy__button button">
+                                 Скопировать
+                              </button>
+                           </div>
+                        </li>
+                        <li>
+                           <p class="step__label">Сумма:</p>
+                           <div class="step__copy copy">
+                              <span class="copy__value">11</span>
+                              <button class="copy__button button">
+                                 Скопировать
+                              </button>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="step__item">
+                     <div class="step__head">
+                        <span class="step__count">
+                           2
+                        </span>
+                        После оплаты нажмите кнопку “Я оплатил”
+                     </div>
+                     <div class="step__info">
+                        <p>Отследить статус заявки можно через Ваш личный кабинет. Пожалуйста убедитесь что Вы не только
+                           нажали на кнопку «Я оплатил».
+                           нои действительно перевели к нам сродства. По всем вопросам, или в случае задержки обмена,
+                           обращайтесь в техническую
+                           поддержку.</p>
+                     </div>
+                     <div class="step__buttons">
+                        <a href="" class="step__button button">
+                           Я оплатил
+                        </a>
+                        <a href="" class="step__button button_border button">
+                           Отмена
+                        </a>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_popup.htm',{})
+   @@include('html/_js.htm',{})
+</body>
+
+</html>

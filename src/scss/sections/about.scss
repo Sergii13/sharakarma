@@ -1,0 +1,162 @@
+.about {
+   padding-top: rem(20);
+   @include adaptiveValue("padding-bottom", 150, 100);
+   @media (max-width: $tablet) {
+      padding-top: 0;
+   }
+   // .about__container
+   &__container {
+   }
+   // .about__wrap
+   &__wrap {
+      background: rgba(149, 149, 149, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 40px;
+      display: flex;
+      padding: rem(30);
+      gap: rem(60);
+      align-items: flex-start;
+      @media (max-width: $tablet) {
+         gap: rem(37);
+      }
+      @media (max-width: $mobile) {
+         flex-direction: column;
+         gap: rem(15);
+         padding: rem(20) rem(20) rem(30);
+      }
+   }
+   // .about__content
+   &__content {
+      flex: 1 1 auto;
+      padding-left: rem(30);
+      @media (max-width: $tablet) {
+         padding-left: 0;
+      }
+   }
+   // .about__title
+   &__title {
+      font-weight: 600;
+      font-size: rem(30);
+      line-height: math.div(37, 30);
+      letter-spacing: -0.02em;
+      color: $greenColor;
+      @media (max-width: $tablet) {
+         font-size: rem(20);
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(15);
+         @media (max-width: $tablet) {
+            margin-bottom: rem(20);
+         }
+         @media (max-width: $mobile) {
+            margin-bottom: rem(5);
+         }
+      }
+   }
+   // .about__items
+   &__items {
+   }
+   // .about__item
+   &__item {
+   }
+   // .about__list
+   &__list {
+      flex: 0 0 rem(400);
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 30px;
+      padding: rem(45) rem(50);
+      @media (max-width: $tablet) {
+         flex: 0 0 rem(287);
+         padding: rem(30) rem(25);
+      }
+      @media (max-width: $mobile) {
+         width: 100%;
+         flex: 1 1 auto;
+      }
+      ul {
+         li {
+            &:not(:last-child) {
+               margin-bottom: rem(25);
+               @media (max-width: $tablet) {
+                  margin-bottom: rem(30);
+               }
+               @media (max-width: $mobile) {
+                  margin-bottom: rem(10);
+               }
+            }
+            a {
+               border: 2px solid #ffffff;
+               border-radius: 40px;
+               display: flex;
+               height: rem(60);
+               align-items: center;
+               justify-content: center;
+               font-weight: 600;
+               font-size: rem(22);
+               line-height: math.div(27, 22);
+               letter-spacing: -0.02em;
+               transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+               @media (max-width: $tablet) {
+                  height: rem(40);
+                  font-size: rem(18);
+               }
+               @media (any-hover: hover) {
+                  &:hover {
+                     background: #888888;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+.item-about {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: rem(15) 0 rem(20);
+   gap: rem(30);
+   @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: rem(10);
+   }
+   &:not(:last-child) {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+   }
+   // .item-about__image
+   &__image {
+      flex-shrink: 0;
+      width: percent(222, 677);
+      @media (max-width: $tablet) {
+         width: rem(120);
+      }
+   }
+   // .item-about__info
+   &__info {
+      max-width: rem(400);
+      width: 100%;
+      @media (max-width: $tablet) {
+         max-width: 100%;
+      }
+      p {
+         font-size: rem(18);
+         line-height: math.div(22, 18);
+         letter-spacing: -0.02em;
+         @media (max-width: $tablet) {
+            font-size: rem(15);
+         }
+         &:not(:last-child) {
+            margin-bottom: rem(15);
+         }
+      }
+   }
+   // .item-about__link
+   &__link {
+      padding: rem(4) rem(20);
+      @media (max-width: $tablet) {
+         height: rem(38);
+         font-size: rem(15);
+      }
+   }
+}

@@ -1,0 +1,176 @@
+// Заголовки, общие БЄМ блоки и проче...
+.socials {
+  ul {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+    a {
+      @media (any-hover: hover) {
+        &:hover {
+          .socials__icon {
+            stroke: $greenColor;
+          }
+        }
+      }
+    }
+  }
+  // .socials__icon
+  &__icon {
+    width: rem(32);
+    height: rem(32);
+    stroke: #fff;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+  }
+}
+.breadcrumbs {
+  padding-left: rem(24);
+  @media (max-width: $tablet) {
+    padding-left: 0;
+  }
+  // .breadcrumbs__list
+  &__list {
+    display: flex;
+    align-items: center;
+    line-height: math.div(20, 16);
+    letter-spacing: -0.02em;
+  }
+  // .breadcrumbs__item
+  &__item {
+    &:not(:last-child) {
+      display: inline-flex;
+      align-items: center;
+      &::after {
+        content: '';
+        height: rem(16);
+        flex-shrink: 0;
+        position: relative;
+        display: inline-block;
+        width: rem(16);
+        background: url('@img/svg/arrow-bread.svg') center/contain no-repeat;
+        margin: 0 rem(4);
+      }
+    }
+    a {
+      color: #888888;
+      @media (any-hover: hover) {
+        &:hover {
+          color: $greenColor;
+        }
+      }
+    }
+  }
+}
+.title {
+  font-weight: 700;
+  @include adaptiveValue('font-size', 50, 30);
+  line-height: math.div(61, 50);
+  letter-spacing: -0.02em;
+  color: #00dbc3;
+}
+.copy {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 40px;
+  display: inline-flex;
+  align-items: center;
+  padding: rem(8) rem(10);
+  @media (max-width: $tablet) {
+    padding: rem(5);
+  }
+  @media (max-width: $mobile) {
+    padding: rem(4);
+  }
+  // .copy__value
+  &__value {
+    white-space: nowrap;
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: rem(0) rem(18);
+    font-weight: 600;
+    font-size: rem(18);
+    line-height: math.div(22, 18);
+    letter-spacing: -0.02em;
+    @media (max-width: $tablet) {
+      font-size: rem(15);
+      padding: rem(0) rem(15);
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(13);
+    }
+  }
+  // .copy__button
+  &__button {
+    flex-shrink: 0;
+    @media (max-width: $tablet) {
+      height: rem(38);
+      font-size: rem(15);
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(13);
+      height: rem(30);
+      padding: rem(5) rem(30);
+    }
+  }
+}
+.empty {
+  background: rgba(149, 149, 149, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(25px);
+  border-radius: 35px;
+  display: flex;
+  padding: rem(20);
+  align-items: center;
+  justify-content: center;
+  min-height: rem(217);
+  font-weight: 500;
+  font-size: rem(28);
+  line-height: math.div(34, 28);
+  letter-spacing: -0.02em;
+  @media (max-width: $tablet) {
+    min-height: rem(180);
+    font-size: rem(20);
+  }
+  @media (max-width: $mobile) {
+    border-radius: 30px;
+  }
+}
+.copied {
+  position: fixed;
+  top: 20px;
+  background: $greenColor;
+  font-size: rem(20);
+  right: 20px;
+  z-index: 1000;
+  border-radius: 20px;
+  padding: rem(15) rem(30);
+}
+.pagging {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(15);
+  margin-top: 40px;
+  @media (max-width: $tablet) {
+    margin-top: 20px;
+  }
+
+  &__arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    &:hover {
+      border: 2px solid #00dbc3;
+    }
+    &.next {
+      img {
+        max-width: rem(24);
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

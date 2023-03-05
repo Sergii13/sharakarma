@@ -1,0 +1,129 @@
+.sale {
+   @include adaptiveValue("padding-bottom", 70, 50);
+   // .sale__container
+   &__container {
+   }
+   // .sale__wrap
+   &__wrap {
+      background: rgba(149, 149, 149, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 40px;
+      display: flex;
+      padding: rem(20) rem(30) rem(20) rem(40);
+      gap: rem(57);
+      align-items: flex-start;
+      @media (max-width: em(1100)) {
+         gap: rem(25);
+      }
+      @media (max-width: $tablet) {
+         padding: rem(25) rem(20) rem(30);
+         border-radius: 30px;
+      }
+      @media (max-width: $mobile) {
+         padding: rem(20);
+         flex-direction: column;
+      }
+   }
+   // .sale__info
+   &__info {
+      padding-top: rem(20);
+      @media (max-width: $tablet) {
+         padding-top: 0;
+         padding-left: rem(40);
+      }
+      @media (max-width: $mobile) {
+         padding-left: 0;
+      }
+      p {
+         font-size: rem(18);
+         line-height: math.div(22, 18);
+         letter-spacing: -0.02em;
+         @media (max-width: $tablet) {
+            font-size: rem(15);
+         }
+         &:not(:last-child) {
+            margin-bottom: rem(34);
+            @media (max-width: $tablet) {
+               margin-bottom: rem(25);
+            }
+         }
+      }
+      ul {
+         padding-left: rem(20);
+         li {
+            font-weight: 600;
+            font-size: rem(18);
+            list-style: disc;
+            line-height: math.div(22, 18);
+            letter-spacing: -0.02em;
+            @media (max-width: $tablet) {
+               font-size: rem(15);
+            }
+            &:not(:last-child) {
+               margin-bottom: rem(24);
+               @media (max-width: $tablet) {
+                  margin-bottom: rem(15);
+               }
+            }
+         }
+      }
+   }
+   // .sale__table
+   &__table {
+      flex: 0 0 percent(580, 1169);
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 30px;
+      padding: rem(20) rem(40);
+      @media (max-width: $tablet) {
+         border-radius: 20px;
+         padding: rem(20);
+      }
+      @media (max-width: $mobile) {
+         flex: 1 1 auto;
+         width: 100%;
+      }
+   }
+}
+.table-sale {
+   // .table-sale__head
+   &__head {
+      display: flex;
+      justify-content: space-between;
+      gap: rem(20);
+      font-weight: 500;
+      font-size: rem(20);
+      line-height: math.div(24, 20);
+      letter-spacing: -0.02em;
+      @media (max-width: $tablet) {
+         font-size: rem(11);
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(11);
+         @media (max-width: $tablet) {
+            margin-bottom: rem(9);
+         }
+      }
+   }
+   // .table-sale__rows
+   &__rows {
+   }
+   // .table-sale__row
+   &__row {
+      background: #00dbc3;
+      display: flex;
+      font-weight: 600;
+      padding: rem(13) rem(30);
+      font-size: rem(20);
+      line-height: math.div(24, 20);
+      letter-spacing: -0.02em;
+      justify-content: space-between;
+      border-radius: 40px;
+      @media (max-width: $tablet) {
+         padding: rem(8) rem(20);
+         font-size: rem(15);
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(10);
+      }
+   }
+}

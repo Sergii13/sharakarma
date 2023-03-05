@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Контакты"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+         <section class="top top_contact">
+            <div class="top__container">
+               <div class="breadcrumbs top__breadcrumbs">
+                  <ul class="breadcrumbs__list">
+                     <li class="breadcrumbs__item">
+                        <a href="">
+                           Главная
+                        </a>
+                     </li>
+                     <li class="breadcrumbs__item">
+                        <span>Контакты</span>
+                     </li>
+                  </ul>
+               </div>
+               <div class="top__content">
+                  <div class="top__image">
+                     <img src="@img/top/06.svg" alt="">
+                  </div>
+                  <div class="top__inner">
+                     <h1 class="title top__title">
+                        Контакты
+                     </h1>
+                     <div class="top__contact contact-top">
+                        <div class="contact-top__row">
+                           <p>Техподдержка:</p>
+                           <ul>
+                              <li>
+                                 <a href="mailto:info.ferma.cc@gmail.com">
+                                    <svg class="contact-top__icon">
+                                       <use href="@img/icons/icons.svg#mail"></use>
+                                    </svg>
+                                    <span>info.ferma.cc@gmail.com</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="">
+                                    <svg class="contact-top__icon">
+                                       <use href="@img/icons/icons.svg#telegram"></use>
+                                    </svg>
+                                    <span>В Telegram</span>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="contact-top__socials">
+                           <ul>
+                              <li>
+                                 <a href="">
+                                    <svg class="contact-top__icon-socials">
+                                       <use href="@img/icons/icons.svg#telegram"></use>
+                                    </svg>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="">
+                                    <svg class="contact-top__icon-socials">
+                                       <use href="@img/icons/icons.svg#instagram"></use>
+                                    </svg>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="">
+                                    <svg class="contact-top__icon-socials">
+                                       <use href="@img/icons/icons.svg#facebook"></use>
+                                    </svg>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="">
+                                    <svg class="contact-top__icon-socials">
+                                       <use href="@img/icons/icons.svg#twitter"></use>
+                                    </svg>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="about">
+            <div class="about__container">
+               <div class="about__wrap">
+                  <div class="about__content">
+                     <h2 class="about__title">
+                        Мы на мониторингах
+                     </h2>
+                     <div class="about__items">
+                        <div class="about__item item-about">
+                           <div class="item-about__image">
+                              <img srcset="@img/about/01@2x.png 2x" src="@img/about/01.png" alt="">
+                           </div>
+                           <div class="item-about__info">
+                              <p>Отзывы о нас на персональной странице мониторинга BestChange</p>
+                              <a href="" class="button item-about__link">
+                                 bestcahnge.ru
+                              </a>
+                           </div>
+                        </div>
+                        <div class="about__item item-about">
+                           <div class="item-about__image">
+                              <img srcset="@img/about/02@2x.png 2x" src="@img/about/02.png" alt="">
+                           </div>
+                           <div class="item-about__info">
+                              <p>Отзывы о нас на персональной странице мониторинга Курс Эксперт </p>
+                              <a href="" class="button item-about__link">
+                                 kurs.expert
+                              </a>
+                           </div>
+                        </div>
+                        <div class="about__item item-about">
+                           <div class="item-about__image">
+                              <img srcset="@img/about/03@2x.png 2x" src="@img/about/03.png" alt="">
+                           </div>
+                           <div class="item-about__info">
+                              <p>Отзывы о нас на мониторинге Bits.Media </p>
+                              <a href="" class="button item-about__link">
+                                 bits.media
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="about__list">
+                     <ul>
+                        <li>
+                           <a href="">
+                              Glazok.org
+                           </a>
+                        </li>
+                        <li>
+                           <a href="">
+                              Udifo.com
+                           </a>
+                        </li>
+                        <li>
+                           <a href="">
+                              Okchanger.ru
+                           </a>
+                        </li>
+                        <li><a href="">
+                              Kurses.com.ua
+                           </a>
+                        </li>
+                        <li>
+                           <a href="">
+                              Chexch.com
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+
+            </div>
+         </section>
+      </main>
+      @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_popup.htm',{})
+   @@include('html/_js.htm',{})
+</body>
+
+</html>

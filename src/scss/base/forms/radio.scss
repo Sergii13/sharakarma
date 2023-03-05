@@ -1,0 +1,112 @@
+.options {
+   // .options_network
+   &_network {
+      .options__item {
+         &:not(:last-child) {
+            margin-bottom: rem(15);
+            @media (max-width: $tablet) {
+               margin-bottom: rem(6);
+            }
+         }
+      }
+      .options__label {
+         display: inline-flex;
+         gap: rem(10);
+         padding: 0;
+         align-items: center;
+         @media (max-width: $tablet) {
+            gap: rem(5);
+         }
+         @media (any-hover: hover) {
+            &:hover {
+               background-color: transparent;
+            }
+         }
+         &::before {
+            content: "";
+            position: relative;
+            display: inline-block;
+            width: rem(15);
+            border-radius: 50%;
+            height: rem(15);
+            flex-shrink: 0;
+            border: 1px solid #ffffff;
+         }
+      }
+      .options__input:checked ~ .options__label {
+         background: transparent;
+         &::before {
+            background-color: #fff;
+            box-shadow: inset 0 0 0px 2px #000;
+         }
+      }
+      .options__text {
+         font-weight: 600;
+         font-size: rem(18);
+         line-height: math.div(22, 18);
+         letter-spacing: -0.02em;
+         @media (max-width: $tablet) {
+            font-size: rem(15);
+         }
+      }
+   }
+   // .options__item
+
+   // .options__item
+   &__item {
+      position: relative;
+      cursor: pointer;
+   }
+
+   // .options__input
+   &__input {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      position: absolute;
+
+      &:checked + .options__label:before {
+      }
+      &:checked + .options__label {
+         background: rgba(255, 255, 255, 0.2);
+      }
+   }
+   // .options__label
+   &__label {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 10px;
+      gap: rem(10);
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      padding: rem(6) rem(10);
+      @media (max-width: $tablet) {
+         padding: rem(6) rem(5);
+         gap: rem(5);
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+         }
+      }
+   }
+   &__img {
+      width: rem(24);
+      height: rem(24);
+      @media (max-width: $tablet) {
+         width: rem(18);
+         height: rem(18);
+      }
+   }
+   // .options__text
+   &__text {
+      font-weight: 500;
+      font-size: rem(18);
+      line-height: math.div(22, 18);
+      letter-spacing: -0.02em;
+      @media (max-width: $tablet) {
+         font-size: rem(13);
+      }
+   }
+}

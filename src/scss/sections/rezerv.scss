@@ -1,0 +1,165 @@
+.rezerv {
+   @include adaptiveValue("padding-top", 60, 20);
+   @include adaptiveValue("padding-bottom", 40, 30);
+   position: relative;
+   z-index: 2;
+   // .rezerv__container
+   &__container {
+   }
+   // .rezerv__row
+   &__row {
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: rem(60);
+      padding: rem(10) rem(25);
+      position: relative;
+      @media (max-width: $tablet) {
+         height: rem(50);
+         border-radius: 10px;
+         padding: rem(5) rem(20);
+      }
+   }
+   // .rezerv__title
+   &__title {
+      font-weight: 500;
+      @include adaptiveValue("font-size", 24, 18);
+      line-height: math.div(29, 24);
+      letter-spacing: -0.02em;
+   }
+   // .rezerv__button
+   &__button {
+      letter-spacing: -0.02em;
+      display: inline-flex;
+      line-height: math.div(22, 18);
+      align-items: center;
+      font-size: rem(18);
+      gap: rem(10);
+      @media (max-width: $mobile) {
+         font-size: rem(16);
+         gap: rem(5);
+      }
+
+      &._spoller-active {
+         &::after {
+            transform: rotate(180deg);
+         }
+         span {
+            &:nth-child(1) {
+               display: none;
+            }
+         }
+         span {
+            &:nth-child(2) {
+               display: block;
+            }
+         }
+      }
+      span {
+         &:nth-child(2) {
+            display: none;
+         }
+      }
+      &::after {
+         content: "";
+         width: rem(24);
+         position: relative;
+         background: url("@img/svg/arrow-select.svg") center / contain no-repeat;
+         transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+         flex-shrink: 0;
+         display: inline-block;
+         height: rem(24);
+      }
+   }
+   // .rezerv__table
+   &__table {
+      position: absolute;
+      top: 100%;
+      transform: translateY(6px);
+      width: 100%;
+      right: 0;
+      background: rgba(149, 149, 149, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(25px);
+      border-radius: 25px;
+      padding: rem(30);
+      @media (max-width: $mobile) {
+         padding: rem(30) rem(11) rem(30) rem(26);
+      }
+   }
+}
+.table-rezerv {
+   // .table-rezerv__scroll
+   &__scroll {
+      max-height: rem(520);
+      @media (max-width: $tablet) {
+         max-height: rem(480);
+      }
+   }
+   // .table-rezerv__grid-layout
+   &__grid-layout {
+      display: grid;
+      gap: rem(20);
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      @media (max-width: $tablet) {
+         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+      @media (max-width: $mobile) {
+         gap: rem(10);
+      }
+      padding-right: rem(22);
+   }
+   // .table-rezerv__item
+   &__item {
+   }
+}
+.item-rezerv {
+   border: 1px solid rgba(255, 255, 255, 0.5);
+   border-radius: 15px;
+   padding: rem(14) rem(9);
+   display: flex;
+   align-items: center;
+   gap: rem(8);
+   transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+   @media (max-width: $tablet) {
+      padding: rem(12) rem(9);
+   }
+   @media (any-hover: hover) {
+      &:hover {
+         background: rgba(217, 217, 217, 0.3);
+      }
+   }
+   // .item-rezerv__icon
+   &__icon {
+      width: rem(40);
+      flex-shrink: 0;
+      @media (max-width: $tablet) {
+         width: rem(30);
+      }
+   }
+   // .item-rezerv__content
+   &__content {
+      letter-spacing: -0.02em;
+      font-weight: 500;
+      h4 {
+         font-size: rem(18);
+         line-height: math.div(18, 15);
+         @media (max-width: $tablet) {
+            font-size: rem(15);
+         }
+         &:not(:last-child) {
+            margin-bottom: rem(2);
+         }
+      }
+      p {
+         font-size: rem(13);
+         line-height: math.div(13, 11);
+         word-break: break-word;
+         @media (max-width: $tablet) {
+            font-size: rem(11);
+         }
+      }
+   }
+}

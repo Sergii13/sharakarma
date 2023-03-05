@@ -1,0 +1,89 @@
+.banner {
+   // .banner__items
+   &__items {
+   }
+   // .banner__item
+   &__item {
+      background: rgba(149, 149, 149, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(25px);
+      border-radius: 35px;
+      padding: rem(32) rem(43);
+      @media (max-width: $tablet) {
+         padding: rem(20) rem(30) rem(36);
+      }
+      @media (max-width: $mobile) {
+         padding: rem(20);
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(92);
+         @media (max-width: em(1200)) {
+            margin-bottom: rem(50);
+         }
+         @media (max-width: $mobile) {
+            margin-bottom: rem(20);
+         }
+      }
+      &:nth-child(2) {
+         @media (max-width: $mobile) {
+            img {
+               max-width: rem(120);
+            }
+         }
+      }
+      &:nth-child(3) {
+         @media (max-width: $tablet) {
+            img {
+               max-width: rem(400);
+            }
+         }
+         @media (max-width: $mobile) {
+            img {
+               max-width: rem(200);
+            }
+         }
+      }
+   }
+   // .banner__title
+   &__title {
+      font-weight: 600;
+      font-size: rem(40);
+      line-height: math.div(49, 40);
+      letter-spacing: -0.02em;
+      text-align: center;
+      color: #00dbc3;
+      @media (max-width: $tablet) {
+         font-size: rem(30);
+      }
+      @media (max-width: $mobile) {
+         font-size: rem(15);
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(20);
+         @media (max-width: $tablet) {
+            margin-bottom: rem(16);
+         }
+         @media (max-width: $mobile) {
+            margin-bottom: rem(10);
+         }
+      }
+   }
+   // .banner__image
+   &__image {
+      display: flex;
+      justify-content: center;
+      &:not(:last-child) {
+         margin-bottom: rem(30);
+         @media (max-width: $tablet) {
+            margin-bottom: rem(20);
+         }
+         @media (max-width: $mobile) {
+            margin-bottom: rem(10);
+         }
+      }
+   }
+   // .banner__copy
+   &__copy {
+      width: 100%;
+   }
+}

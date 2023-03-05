@@ -1,0 +1,167 @@
+.faq {
+   @include adaptiveValue("padding-bottom", 80, 60);
+   // .faq__container
+   &__container {
+   }
+   // .faq__spollers
+   &__spollers {
+   }
+   // .faq__text
+   &__text {
+      font-size: rem(18);
+      line-height: math.div(22, 18);
+      letter-spacing: -0.02em;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: rem(44);
+      @media (max-width: $tablet) {
+         margin-top: rem(7);
+         font-size: rem(13);
+      }
+      @media (max-width: $mobileSmall) {
+         font-size: rem(11);
+      }
+      a {
+         font-weight: 600;
+         color: #ffffff;
+         transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+         @media (any-hover: hover) {
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+      }
+   }
+}
+.faq-spollers {
+   counter-reset: li;
+
+   // .faq-spollers__item
+   &__item {
+      &:not(:last-child) {
+         margin-bottom: rem(20);
+         @media (max-width: $tablet) {
+            margin-bottom: rem(10);
+         }
+      }
+   }
+   // .faq-spollers__title
+   &__title {
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 20px;
+      display: flex;
+      text-align: left;
+      align-items: center;
+      width: 100%;
+      padding: rem(15) rem(30);
+      font-weight: 500;
+      font-size: rem(23);
+      line-height: math.div(28, 23);
+      letter-spacing: -0.02em;
+      gap: rem(20);
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      @media (max-width: $tablet) {
+         padding: rem(10) rem(15);
+         font-size: rem(16);
+         gap: rem(10);
+         font-weight: 700;
+      }
+      @media (max-width: $mobile) {
+         padding: rem(18) rem(15);
+         font-size: rem(15);
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            border: 2px solid rgba(255, 255, 255, 1);
+         }
+      }
+      span {
+         flex: 1 1 auto;
+      }
+      &::after {
+         content: "";
+         position: relative;
+         display: inline-block;
+         height: rem(32);
+         transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+         width: rem(32);
+         background: url("@img/svg/arrow-spoller.svg") center / contain no-repeat;
+         flex-shrink: 0;
+         @media (max-width: $tablet) {
+            width: rem(22);
+            height: rem(22);
+         }
+      }
+      &::before {
+         counter-increment: li;
+         content: counter(li);
+         width: rem(40);
+         height: rem(40);
+         position: relative;
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+         flex-shrink: 0;
+         border-radius: 50%;
+         border: 2px solid #ffffff;
+         font-weight: 500;
+         font-size: rem(28);
+         line-height: math.div(34, 28);
+         letter-spacing: -0.02em;
+         @media (max-width: $tablet) {
+            width: rem(30);
+            height: rem(30);
+            font-size: rem(20);
+         }
+      }
+      &._spoller-active {
+         margin-left: auto;
+         &::after {
+            transform: rotate(180deg);
+         }
+      }
+   }
+   // .faq-spollers__body
+   &__body {
+   }
+   // .faq-spollers__text
+   &__text {
+      padding: rem(20) 0 rem(40);
+      font-size: rem(18);
+      line-height: math.div(22, 18);
+      letter-spacing: -0.02em;
+      @media (max-width: $tablet) {
+         padding-top: rem(10);
+         font-size: rem(13);
+      }
+      @media (max-width: $mobile) {
+         padding: rem(20) rem(0) rem(27);
+      }
+      & > * {
+         &:not(:last-child) {
+            margin-bottom: rem(20);
+            @media (max-width: $tablet) {
+               margin-bottom: rem(15);
+            }
+         }
+      }
+   }
+   &_f {
+      .faq-spollers__text {
+         padding: rem(20) 0 rem(30);
+         @media (max-width: $tablet) {
+            padding: rem(10) 0 0;
+         }
+         @media (max-width: $mobile) {
+            padding: rem(5) 0 rem(10);
+         }
+      }
+      .faq-spollers__title {
+         @media (max-width: $tablet) {
+            font-weight: 500;
+         }
+         &::before {
+            content: "?";
+         }
+      }
+   }
+}
