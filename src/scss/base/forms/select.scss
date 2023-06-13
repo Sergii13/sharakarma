@@ -1,239 +1,365 @@
 // <SELECT>
 // Снипет (HTML): sel
 .select {
-   position: relative;
-   display: inline-flex;
-   &_lang {
-      .select__title {
-         border: 1px solid #ffffff;
-         border-radius: 20px;
-         padding: 0 rem(7);
-         height: rem(42);
-         .select__text {
-            display: none;
-         }
-      }
+  position: relative;
+  display: inline-flex;
+
+  &_lang {
+    .select__title {
+      border: 1px solid #ffffff;
+      border-radius: 20px;
+      padding: 0 rem(7);
+      height: rem(42);
+
       .select__text {
-         color: #fff;
+        display: none;
       }
-      .select__asset {
-         height: rem(28);
-         flex-shrink: 0;
-         width: rem(28);
-         flex-shrink: 0;
-      }
-      .select__value {
-         gap: rem(4);
-         &::after {
-            background: url("@img/svg/arrow-select.svg") center / contain no-repeat;
-            width: rem(24);
-            height: rem(24);
-         }
-      }
-      .select__option {
-         padding: rem(5) 0;
-         display: block;
-         @media (any-hover: hover) {
-            &:hover {
-               .select__text {
-                  color: $greenColor;
-               }
-               background-color: transparent;
-            }
-         }
-         &:not(:last-child) {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-         }
-      }
-      .select__row {
-         display: flex;
-         gap: rem(4);
-      }
-      .select__options {
-         border: 1px solid #ffffff;
-         border-radius: 20px;
-         background: rgba(0, 0, 0, 1);
-         top: calc(100% + 4px);
-         padding: rem(5) rem(7);
-      }
-   }
-   &_refferal {
-      .select__title {
-         border: 1px solid #ffffff;
-         border-radius: 30px;
-         padding: 0 rem(20);
-         height: rem(48);
-         gap: rem(10);
-      }
-      .select__text {
-         font-weight: 500;
-         font-size: rem(18);
-         line-height: math.div(22, 18);
-         letter-spacing: -0.02em;
-      }
-      .select__asset {
-         height: rem(28);
-         flex-shrink: 0;
-         width: rem(28);
-         flex-shrink: 0;
-      }
-      .select__value {
-         gap: rem(4);
-         &::after {
-            background: url("@img/svg/arrow-select.svg") center / contain no-repeat;
-            width: rem(24);
-            height: rem(24);
-         }
-      }
-      .select__option {
-         padding: rem(5) 0;
-         display: block;
-         white-space: nowrap;
-         color: #fff;
-         @media (any-hover: hover) {
-            &:hover {
-               .select__text {
-                  color: $greenColor;
-               }
-               background-color: transparent;
-            }
-         }
-         &:not(:last-child) {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-         }
-      }
-      .select__row {
-         display: flex;
-         gap: rem(4);
-      }
-      .select__options {
-         border: 1px solid #ffffff;
-         border-radius: 20px;
-         background: linear-gradient(158.86deg, #0b443f 0.66%, #480b3d 33.9%, #3d1150 61.52%, #093935 98.85%);
-         top: calc(100% + 4px);
-         padding: rem(5) rem(20);
-      }
-   }
-   // .select__body
-   &__body {
-      position: relative;
-   }
-   // .select__title
-   &__title {
-      color: inherit;
+    }
 
-      text-align: left;
+    .select__text {
+      color: #fff;
+    }
 
-      cursor: pointer;
-      width: 100%;
-   }
-   // .select__value
-   &__value {
-      display: flex;
-      align-items: center;
-      height: rem(30);
+    .select__asset {
+      height: rem(28);
+      flex-shrink: 0;
+      width: rem(28);
+      flex-shrink: 0;
+    }
 
-      gap: rem(10);
-      > * {
-         flex: 1 1 auto;
+    .select__value {
+      gap: rem(4);
+
+      &::after {
+        background: url("@img/svg/arrow-select.svg") center / contain no-repeat;
+        width: rem(24);
+        height: rem(24);
       }
-      &:after {
-         content: "";
-         transition: all 0.3s ease 0s;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         ._select-open & {
-            transform: rotate(-180deg);
-         }
-      }
-      &._select-pseudo-label {
-         &::before {
-            content: attr(data-pseudo-label);
-            opacity: 0.5;
-         }
-      }
-   }
-   // .select__text
-   &__text {
-      flex: 1 1 auto;
-   }
-   &__input {
-      width: 100%;
-      background-color: transparent;
-      height: 100%;
-   }
-   // .select__options
-   &__options {
-      color: #000;
-      position: absolute;
-      top: 29px;
-      border-radius: 0 0 4px 4px;
-      min-width: 100%;
-      left: 0;
-      background-color: #fff;
-      border-top: 0;
-      border: 1px solid #d9d9d9;
-      border-top: 0;
-      padding: 10px 0px 5px 0px;
-   }
-   // .select__scroll
-   &__scroll {
-      overflow-y: auto;
-      overflow-x: hidden;
-      // Максимальная высота
-      max-height: 200px;
-      // Стили скроллбара
-      .simplebar-scrollbar {
-         &::before {
-            //opacity: 1;
-         }
-      }
-   }
-   // .select__option
-   &__option {
-      width: 100%;
-      text-align: left;
-      cursor: pointer;
-      padding: 5px 15px;
-      color: inherit;
-      &._select-selected {
-         background-color: #eee;
-      }
+    }
+
+    .select__option {
+      padding: rem(5) 0;
+      display: block;
       @media (any-hover: hover) {
-         &:hover {
-            background: #d9d9d9;
-         }
+        &:hover {
+          .select__text {
+            color: $greenColor;
+          }
+
+          background-color: transparent;
+        }
       }
-   }
 
-   // Конструкция дополнительных данных
-   &__row {
-      display: inline-flex;
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    .select__row {
+      display: flex;
+      gap: rem(4);
+    }
+
+    .select__options {
+      border: 1px solid #ffffff;
+      border-radius: 20px;
+      background: rgba(0, 0, 0, 1);
+      top: calc(100% + 4px);
+      padding: rem(5) rem(7);
+    }
+  }
+
+  &_verify {
+    width: 100%;
+    max-width: 360px;
+    @media (max-width: $mobileSmall) {
+      max-width: 100%;
+    }
+
+    .select__body {
+      width: 100%;
+    }
+
+    .select__title {
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 20px;
+      padding: 0 rem(12);
+      height: rem(40);
+      width: 100%;
+
+      .select__row {
+        gap: 7px;
+      }
+
+      .select__text {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+      }
+    }
+
+    .select__text {
+      color: #fff;
+    }
+
+    .select__asset {
+      height: rem(22);
+      flex-shrink: 0;
+      width: rem(22);
+      flex-shrink: 0;
+    }
+
+    .select__scroll {
+      max-height: 264px;
+    }
+
+    .select__value {
+      gap: rem(4);
+
+      &::after {
+        background: url("@img/svg/arrow-select.svg") center / contain no-repeat;
+        width: rem(24);
+        height: rem(24);
+      }
+    }
+
+    .select__option {
+      padding: rem(6) 0;
+      display: block;
+      @media (any-hover: hover) {
+        &:hover {
+          .select__text {
+            color: $greenColor;
+          }
+
+          background-color: transparent;
+        }
+      }
+    }
+
+    .select__row {
+      display: flex;
+      gap: rem(10);
+    }
+
+    .select__options {
+      border-radius: 20px;
+      background: rgba(149, 149, 149, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(25px);
+      top: calc(100% + 4px);
+      padding: rem(9) rem(17);
+    }
+  }
+
+  &_refferal {
+    .select__title {
+      border: 1px solid #ffffff;
+      border-radius: 30px;
+      padding: 0 rem(20);
+      height: rem(48);
+      gap: rem(10);
+    }
+
+    .select__text {
+      font-weight: 500;
+      font-size: rem(18);
+      line-height: math.div(22, 18);
+      letter-spacing: -0.02em;
+    }
+
+    .select__asset {
+      height: rem(28);
+      flex-shrink: 0;
+      width: rem(28);
+      flex-shrink: 0;
+    }
+
+    .select__value {
+      gap: rem(4);
+
+      &::after {
+        background: url("@img/svg/arrow-select.svg") center / contain no-repeat;
+        width: rem(24);
+        height: rem(24);
+      }
+    }
+
+    .select__option {
+      padding: rem(5) 0;
+      display: block;
+      white-space: nowrap;
+      color: #fff;
+      @media (any-hover: hover) {
+        &:hover {
+          .select__text {
+            color: $greenColor;
+          }
+
+          background-color: transparent;
+        }
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    .select__row {
+      display: flex;
+      gap: rem(4);
+    }
+
+    .select__options {
+      border: 1px solid #ffffff;
+      border-radius: 20px;
+      background: linear-gradient(158.86deg, #0b443f 0.66%, #480b3d 33.9%, #3d1150 61.52%, #093935 98.85%);
+      top: calc(100% + 4px);
+      padding: rem(5) rem(20);
+    }
+  }
+
+  // .select__body
+  &__body {
+    position: relative;
+  }
+
+  // .select__title
+  &__title {
+    color: inherit;
+
+    text-align: left;
+
+    cursor: pointer;
+    width: 100%;
+  }
+
+  // .select__value
+  &__value {
+    display: flex;
+    align-items: center;
+    height: rem(30);
+
+    gap: rem(10);
+
+    > * {
+      flex: 1 1 auto;
+    }
+
+    &:after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      display: flex;
+      justify-content: center;
       align-items: center;
-   }
-   &__asset {
-   }
-   &__text {
-   }
 
-   // Состояния селекта
-   &._select-open {
-      z-index: 5;
-   }
-   &._select-disabled {
-   }
-   &._select-active {
-   }
-   &._select-focus {
-   }
-   &._select-multiple {
-   }
-   &._select-checkbox {
-   }
+      ._select-open & {
+        transform: rotate(-180deg);
+      }
+    }
+
+    &._select-pseudo-label {
+      &::before {
+        content: attr(data-pseudo-label);
+        opacity: 0.5;
+      }
+    }
+  }
+
+  // .select__text
+  &__text {
+    flex: 1 1 auto;
+  }
+
+  &__input {
+    width: 100%;
+    background-color: transparent;
+    height: 100%;
+  }
+
+  // .select__options
+  &__options {
+    color: #000;
+    position: absolute;
+    top: 29px;
+    border-radius: 0 0 4px 4px;
+    min-width: 100%;
+    left: 0;
+    background-color: #fff;
+    border-top: 0;
+    border: 1px solid #d9d9d9;
+    border-top: 0;
+    padding: 10px 0px 5px 0px;
+  }
+
+  // .select__scroll
+  &__scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+    // Максимальная высота
+    max-height: 200px;
+    // Стили скроллбара
+    .simplebar-scrollbar {
+      &::before {
+        //opacity: 1;
+      }
+    }
+  }
+
+  // .select__option
+  &__option {
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    padding: 5px 15px;
+    color: inherit;
+
+    &._select-selected {
+      background-color: #eee;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: #d9d9d9;
+      }
+    }
+  }
+
+  // Конструкция дополнительных данных
+  &__row {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__asset {
+  }
+
+  &__text {
+  }
+
+  // Состояния селекта
+  &._select-open {
+    z-index: 5;
+  }
+
+  &._select-disabled {
+  }
+
+  &._select-active {
+  }
+
+  &._select-focus {
+  }
+
+  &._select-multiple {
+  }
+
+  &._select-checkbox {
+  }
 }
 
 // Тег
 ._select-tag {
-   cursor: pointer;
+  cursor: pointer;
 }
